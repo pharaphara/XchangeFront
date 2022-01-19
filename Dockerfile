@@ -6,12 +6,10 @@ WORKDIR /app
 COPY package.json /app
 
 RUN npm install
-EXPOSE 4200
+
 COPY . /app
-RUN npm run build --prod
+RUN ng serve
+EXPOSE 4200
 # Stage 2
 
-FROM nginx:1.20.2-alpine
 
-COPY --from=build-step /app/docs /usr/share/nginx/html
-EXPOSE 4200
