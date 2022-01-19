@@ -1,0 +1,85 @@
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-card {
+  margin: 10px ;
+}
+
+mat-card {
+  background-color: #142028;
+  color: lightgrey;
+  max-height: 300px;
+}
+
+mat-card-subtitle {
+  color: lightgray;
+}
+
+.around-logo {
+  position: relative;
+  float: right;
+  bottom: 66px;
+}
+
+mat-divider {
+  border-color: #aaebf1;
+}
+
+.description {
+  text-align: center;
+  clear: right;
+}
+
+.chart-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+}
+
+.currency-logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+}
+
+.container-pair {
+  display: flex;
+  margin-top: 20px;
+}
+
+.container-pair h2 {
+  padding: 10px;
+  color: #818ea3;
+}
+
+.container-pair h1 {
+  padding-top: 10px;
+  font-size: 30px;
+  color: white;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.container-list-chart {
+  display: flex;
+}
+ .list-item {
+  color: white;
+}
+
+mat-list {
+  margin-top: 60px;
+}
+
+mat-list-item:hover {
+  color: #78bcba;
+}
