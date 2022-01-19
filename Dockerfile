@@ -8,8 +8,11 @@ COPY package.json /app
 RUN npm install
 
 COPY . /app
-RUN ng serve
-EXPOSE 4200
+RUN npm run build --prod
 # Stage 2
+
+FROM nginx:1.20.2-alpine
+
+COPY --from=build-step /app/docs /usr/share/nginx/html
 
 
