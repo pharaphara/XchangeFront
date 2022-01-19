@@ -6,7 +6,7 @@ WORKDIR /app
 COPY package.json /app
 
 RUN npm install
-
+EXPOSE 4200
 COPY . /app
 RUN npm run build --prod
 # Stage 2
@@ -14,4 +14,4 @@ RUN npm run build --prod
 FROM nginx:1.17.1-alpine
 
 COPY --from=build-step /app/docs /usr/share/nginx/html
-
+EXPOSE 4200
