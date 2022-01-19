@@ -15,4 +15,6 @@ FROM nginx:1.20.2-alpine
 
 COPY --from=build-step /app/docs /usr/share/nginx/html
 
+EXPOSE 80
+
 
