@@ -13,8 +13,6 @@ RUN npm run build --prod
 
 FROM nginx:1.20.2-alpine
 
-COPY --from=build-step /app/docs /usr/share/nginx/html
+COPY --from=build-step /app/dist/exchange-app /usr/share/nginx/html
 
 EXPOSE 80
-
-
