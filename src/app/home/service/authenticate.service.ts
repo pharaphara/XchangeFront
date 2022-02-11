@@ -4,6 +4,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable, of, tap} from "rxjs";
 import {Login} from "../model/login";
 import {LoginResponse} from "../model/LogResponse";
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,12 @@ import {LoginResponse} from "../model/LogResponse";
 export class AuthenticateService {
 
   public currentRole : string = "?";
-  private authenticateURL = 'http://localhost:8085/authenticate';
-  private _headers = new HttpHeaders({'Content-Type': 'application/json'});
+  private authenticateURL = environment.backEnd+'/authenticate';
+  private _headers =  new HttpHeaders()
+  .set('content-type', 'application/json')
+  .set('Access-Control-Allow-Origin', '*')
+  .set('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+ 
   public isAuthenticated: boolean = false;
   public token: string = '';
 

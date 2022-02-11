@@ -4,9 +4,9 @@
 
 export const environment = {
   production: true,
-  apiWalletUrl: 'http://localhost:9090/assets-api-rest',
-  backEnd: 'http://localhost:8085/',
-  apiMatchingEngine: 'http://localhost:8080'
+  apiWalletUrl: 'https://1wallet-env.eba-7cp9usvp.eu-west-3.elasticbeanstalk.com/assets-api-rest',
+  backEnd: 'http://3legacy-env.eba-3dibhvqm.eu-west-3.elasticbeanstalk.com',
+  apiMatchingEngine: 'http://2matchengine-env.eba-8aanag8h.eu-west-3.elasticbeanstalk.com'
 };
 
 /*
